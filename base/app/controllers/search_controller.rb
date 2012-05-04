@@ -7,7 +7,9 @@ class SearchController < ApplicationController
   MIN_QUERY=2
   def index
     @search_result =
-      if params[:q].blank? || too_short_query
+      if params[:q].blank?
+        search :extended # TODO: this should have :match_mode => :fullscan for efficiency
+      elsif too_short_query
         []
       elsif params[:mode].eql? "header_search"
         search :quick
