@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
   # Deep Merge support for Hashes
   s.add_runtime_dependency('deep_merge')
   # Rails
-  s.add_runtime_dependency('rails', '>= 3.1.0')
+  s.add_runtime_dependency('rails', '>= 3.2.0')
   # Activity and Relation hierarchies
   s.add_runtime_dependency('ancestry', '~> 1.2.3')
   # SQL foreign keys
   s.add_runtime_dependency('foreigner', '~> 1.1.1')
   # Authentication
-  s.add_runtime_dependency('devise', '~> 1.5.3')
+  s.add_runtime_dependency('devise', '>= 2.0')
   # CRUD controllers
   s.add_runtime_dependency('inherited_resources', '~> 1.3.0')
   # Slug generation
